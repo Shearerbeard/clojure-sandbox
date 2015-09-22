@@ -1,0 +1,73 @@
+@import "transition";
+
+.input-container {
+  width: 296px;
+  height: 56px;
+  margin: 0 auto 12px auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  border: 2px solid #e5e5e5;
+  background-color: rgba(255, 255, 255, 0.60);
+  color: #3a3a3a;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  text-transform: uppercase;
+  .mxr-transition(0.3);
+
+  label, input {
+    background-color: transparent;
+  }
+
+  label {
+    transition: all 0.2s ease-in;
+    position: absolute;
+    width: 284px;
+    margin-left: 12px;
+    transform: translate3d(0, 0, 0);
+    left: 0;
+    top: 15px;
+  }
+
+  input {
+    font-size: 18px;
+    margin-left: 12px;
+    font-family: "Roboto", sans-serif;
+    border: 0;
+    z-index: 200;
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
+  }
+
+
+  &.selected {
+    background-color: rgba(255, 255, 255, 0.20);
+    input {
+      color: white;
+    }
+    label {
+      color: white;
+      font-size: 10px;
+      transform: translate3d(-8px, -15px, 0);
+    }
+  }
+
+  &.disabled {
+    background-color: #7c7c7c;
+    border: 2px solid #7c7c7c;
+    color: #636363;
+  }
+
+  &.error {
+    background-color: rgba(160, 18, 18, 0.5);
+    border: 2px solid #a01212;
+    label, input {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "transition";
+
+@track-height: 8px;
+@head-height: 18px;
+@head-stroke: 2px;
+@switch-width: @head-height * 2;
+
+.switch-container {
+  width: @switch-width;
+  height: @head-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  .track {
+    width: 100%;
+    height: @track-height;
+    border-radius: @track-height / 2;
+    background-color: rgba(255, 255, 255, 0.6)
+  }
+
+  .head {
+    .mxr-transition(0.2s);
+    border: 2px solid white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: (@head-height - (@head-stroke * 2));
+    height: (@head-height - (@head-stroke * 2));
+    transform: translate3d(0, 0, 0);
+    border-radius: @head-height;
+    background-color: #7c7c7c;
+    &.active {
+     transform: translate3d((@switch-width - @head-height), 0, 0);
+      background-color: #014afe;
+    }
+  }
+}

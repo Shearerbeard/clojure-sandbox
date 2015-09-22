@@ -1,0 +1,40 @@
+@import "transition";
+
+.check-container {
+  height: 20px;
+  color: white;
+  width: 300px;
+  margin: 20px auto 20px auto;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  .check-border {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    div {
+      width: 14px;
+      height: 14px;
+      background-color: #014afe;
+    }
+    img, div {
+      .mxr-transition(0.2s);
+      transform: scale3d(1.0, 1.0, 1.0);
+      &.selected {
+        transform: scale3d(0.0, 0.0, 0.0);
+      }
+    }
+  }
+  label {
+    flex: 2;
+    padding-left: 6px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}

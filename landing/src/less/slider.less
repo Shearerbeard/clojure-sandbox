@@ -1,0 +1,58 @@
+@import "transition";
+
+@track-height: 8px;
+@head-height: 18px;
+@head-stroke: 2px;
+
+
+.slider-container {
+  height: @head-height * 1.2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  .head-wrap {
+    z-index: 1000;
+    width: 100%;
+    height: @head-height * 1.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &.transition {
+      .mxr-transition(0.1s);
+      .head {
+        height: (@head-height *1.2 - (@head-stroke * 2));
+        width: (@head-height *1.2 - (@head-stroke * 2));
+      }
+    }
+    .head {
+      z-index: 1000;
+      width: (@head-height - (@head-stroke * 2));
+      height: (@head-height - (@head-stroke * 2));
+      border: @head-stroke solid white;
+      border-radius: @head-height / 2;
+      background-color: #014afe;
+      position: relative;
+      top: 0;
+      left: 9px;
+    }
+  }
+
+  .fill {
+    background-color: #014afe;
+    height: @track-height;
+    border-radius: @track-height / 2;
+  }
+
+  .track {
+    width: 100%;
+    border-radius: @track-height / 2;
+    height: @track-height;
+    background-color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+  }
+}
