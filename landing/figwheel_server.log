@@ -1691,3 +1691,29 @@ notifying browser that file changed:  resources/public/js/out/goog/deps.js
 notifying browser that file changed:  /landing/components/button.js
 notifying browser that file changed:  /landing/core.js
 notifying browser that file changed:  /landing/main.js
+Figwheel: focusing on build-ids (app)
+[0mCompiling "resources/public/js/app.js" from ["src/cljs" "env/dev/cljs"]...
+[32mSuccessfully compiled "resources/public/js/app.js" in 0.369 seconds.[0m
+notifying browser that file changed:  resources/public/js/app.js
+notifying browser that file changed:  resources/public/js/out/goog/deps.js
+notifying browser that file changed:  /landing/components/button.js
+notifying browser that file changed:  /landing/components/helpers.js
+notifying browser that file changed:  /landing/components/input.js
+notifying browser that file changed:  /landing/components/slider.js
+notifying browser that file changed:  /landing/components/checkbox.js
+notifying browser that file changed:  /landing/components/switch.js
+notifying browser that file changed:  /landing/core.js
+notifying browser that file changed:  /landing/main.js
+Figwheel: focusing on build-ids (app)
+[0mCompiling "resources/public/js/app.js" from ["src/cljs" "env/dev/cljs"]...
+[32mSuccessfully compiled "resources/public/js/app.js" in 0.378 seconds.[0m
+notifying browser that file changed:  resources/public/js/app.js
+notifying browser that file changed:  resources/public/js/out/goog/deps.js
+notifying browser that file changed:  /landing/components/button.js
+notifying browser that file changed:  /landing/components/helpers.js
+notifying browser that file changed:  /landing/components/input.js
+notifying browser that file changed:  /landing/components/slider.js
+notifying browser that file changed:  /landing/components/checkbox.js
+notifying browser that file changed:  /landing/components/switch.js
+notifying browser that file changed:  /landing/core.js
+notifying browser that file changed:  /landing/main.js
